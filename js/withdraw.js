@@ -1,6 +1,11 @@
 document.getElementById('btn_withdraw').addEventListener('click',function () {
     const userFlild = document.getElementById('user_withdraw');
     const userFlildValue = userFlild.value;
+    userFlild.value = '';
+    if(isNaN(parseFloat(userFlildValue))){
+        alert('Please enter valid number')
+        return;
+    }
     const totalWithdraw = document.getElementById('total_withdraw');
     const totalDepositValue = totalWithdraw.innerText;
     const withdraw = parseFloat(userFlildValue) + parseFloat(totalDepositValue);
@@ -13,5 +18,4 @@ document.getElementById('btn_withdraw').addEventListener('click',function () {
     totalWithdraw.innerText = withdraw;
     const totalBalance = parseFloat(totalBalanceValue) - userFlildValue;
     totalBalanceElement.innerText = totalBalance;
-    userFlild.value = '';
 })
