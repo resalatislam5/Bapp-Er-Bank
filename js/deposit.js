@@ -7,7 +7,7 @@ document.getElementById('btn_deposit').addEventListener('click',function () {
     totalDeposit.innerText = deposit;
     const totalBalanceElement = document.getElementById('total_balance');
     const totalBalanceValue = totalBalanceElement.innerText;
-    const totalBalance = parseFloat(totalBalanceValue) + deposit;
+    const totalBalance = parseFloat(totalBalanceValue) + parseFloat(userFlildValue);
     totalBalanceElement.innerText = totalBalance;
     userFlild.value = '';
 })
