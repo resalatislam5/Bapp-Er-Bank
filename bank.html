@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <header>
+        <h1 class="text-6xl text-center mt-16">Let's get some <span class="font-semibold text-violet-600">Money</span> !!!</h1>
+    </header>
+    <main class="container mx-auto">
+      <section class="mt-20">
+        <div class="grid grid-cols-3 gap-1 ">
+          <!-- deposit -->
+          <div class="bg-green-600 w-9/12 py-10 text-white px-6 rounded-lg mx-auto">
+              <h3 class="text-4xl">Deposit</h3>
+              <p class="text-2xl">$<span id="total_deposit">00</span></p>
+          </div>
+          <!-- Withdraw -->
+          <div class="bg-pink-400 w-9/12 py-10 text-white px-6 rounded-lg mx-auto">
+              <h3 class="text-4xl">Withdraw</h3>
+              <p class="text-2xl">$<span id="total_withdraw">00</span></p>
+          </div>
+          <!-- Balance -->
+          <div class="bg-red-400 w-9/12 py-10 text-white px-6 rounded-lg mx-auto">
+              <h3 class="text-4xl">Balance</h3>
+              <p class="text-2xl">$<span id="total_balance">1240</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-20">
+        <div class="grid grid-cols-2 gap-1">
+          <div class=" w-9/12 mx-auto bg-sky-500 text-white p-10 rounded-xl">
+            <h3 class="text-4xl">Please Deposit</h3>
+            <input class="block mt-5 ml-5 p-2 w-80 text-black" id="user_deposit" type="number" placeholder=" $ amount you want to deposit">
+            <button class="px-10 py-2 ml-5 bg-sky-800 mt-4 text-white font-semibold rounded-lg hover:bg-slate-900" id="btn_deposit">Deposit</button>
+          </div>
+          <div class=" w-9/12 mx-auto bg-fuchsia-400 text-white p-10 rounded-xl">
+            <h3 class="text-4xl">Please withdraw</h3>
+            <input class="block mt-5 ml-5 p-2 w-80 text-black" type="number" placeholder=" $ amount you want to withdraw" id="user_withdraw">
+            <button class="px-10 py-2 ml-5 bg-sky-800 mt-4 text-white font-semibold rounded-lg hover:bg-slate-900" id="btn_withdraw">withdraw</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
+    <script src="tailwind.config.js"></script>
+    <script src="js/deposit.js"></script>
+</body>
+</html>
